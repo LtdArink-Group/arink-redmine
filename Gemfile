@@ -29,6 +29,14 @@ gem 'tzinfo-data', platforms: [:mingw, :x64_mingw, :mswin, :jruby]
 gem "rbpdf", "~> 1.19.2"
 
 gem 'puma'
+group :development do
+    gem 'capistrano',         require: false
+    gem 'capistrano-rbenv',   require: false
+    gem 'capistrano-rails',   require: false
+    gem 'capistrano-bundler', require: false
+    gem 'capistrano3-puma',   require: false
+end
+
 
 # Optional gem for LDAP authentication
 group :ldap do
