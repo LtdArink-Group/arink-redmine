@@ -29,6 +29,8 @@ gem 'tzinfo-data', platforms: [:mingw, :x64_mingw, :mswin, :jruby]
 gem "rbpdf", "~> 1.19.2"
 
 gem 'puma'
+gem 'mailgun_rails'
+
 group :development do
     gem 'capistrano', "3.7.1",require: false
     gem 'capistrano-rbenv',   require: false

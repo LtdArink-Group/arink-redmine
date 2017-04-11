@@ -14,6 +14,13 @@ Rails.application.configure do
   config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
 
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+    api_key: ENV['MAILGUN_API_KEY'],
+    domain: 'mg.t-org.net'
+  }
+  config.action_mailer.default_url_options = { host: 'redmine.t-org.net' }
+
   # Disable delivery errors
   config.action_mailer.raise_delivery_errors = false
 
