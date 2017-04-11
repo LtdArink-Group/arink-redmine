@@ -30,7 +30,7 @@ gem "rbpdf", "~> 1.19.2"
 
 gem 'puma'
 group :development do
-    gem 'capistrano',         require: false
+    gem 'capistrano', "3.7.1",require: false
     gem 'capistrano-rbenv',   require: false
     gem 'capistrano-rails',   require: false
     gem 'capistrano-bundler', require: false

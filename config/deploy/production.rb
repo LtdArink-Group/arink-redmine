@@ -3,7 +3,7 @@
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
-server "http://arink-group.cloudapp.net/", user: "deployer", roles: %w{app db web} # , my_property: :my_value
+server "arink-group.cloudapp.net", user: "deployer", roles: %w{app db web} # , my_property: :my_value
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
@@ -25,7 +25,7 @@ set :puma_threads,    [4, 16]
 set :puma_workers,    2
 
 # Don't change these unless you know what you're doing
-set :pty,             true
+# set :pty,             true
 set :use_sudo,        false
 set :stage,           :production
 set :deploy_via,      :remote_cache
@@ -48,7 +48,7 @@ namespace :puma do
     end
   end
 
-  before :start, :make_dirs
+  before 'deploy:started', 'puma:make_dirs'
 end
 
 namespace :deploy do

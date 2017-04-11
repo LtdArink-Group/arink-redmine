@@ -1,9 +1,11 @@
 # config valid only for current version of Capistrano
-lock "3.8.0"
+lock "3.7.1"
 
 set :application, "arink-redmine"
 set :repo_url, "git@github.com:Kirillvs/arink-redmine.git"
 set :user, 'deployer'
+set :rbenv_type, :user # or :system, depends on your rbenv setup
+set :rbenv_ruby, '2.3.3'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -23,7 +25,7 @@ set :deploy_to,       "/home/#{fetch(:user)}/#{fetch(:application)}"
 # set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, 'config/database.yml', 'config/secrets.yml'
+append :linked_files, 'config/database.yml', 'config/settings.yml'
 
 # Default value for linked_dirs is []
 # append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
