@@ -48,6 +48,7 @@ namespace :puma do
     end
   end
 
+  # before :start, :make_dirs
   before 'deploy:started', 'puma:make_dirs'
 end
 
