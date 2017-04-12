@@ -2,7 +2,7 @@
 lock "3.7.1"
 
 set :application, "arink-redmine"
-set :repo_url, "git@github.com:Kirillvs/arink-redmine.git"
+set :repo_url, "git@github.com:LtdArink-Group/arink-redmine.git"
 set :user, 'deployer'
 set :rbenv_type, :user # or :system, depends on your rbenv setup
 set :rbenv_ruby, '2.3.3'
