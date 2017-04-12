@@ -3,7 +3,7 @@
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
-server "arink-group.cloudapp.net", user: "deployer", roles: %w{app db web} # , my_property: :my_value
+server "arink-redmine.cloudapp.net", user: "deployer", roles: %w{app db web} # , my_property: :my_value
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
@@ -17,9 +17,9 @@ server "arink-group.cloudapp.net", user: "deployer", roles: %w{app db web} # , m
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
-role :app, %w{deployer@arink-group.cloudapp.net}
-role :web, %w{deployer@arink-group.cloudapp.net}
-role :db,  %w{deployer@arink-group.cloudapp.net}
+role :app, %w{deployer@arink-redmine.cloudapp.net}
+role :web, %w{deployer@arink-redmine.cloudapp.net}
+role :db,  %w{deployer@arink-redmine.cloudapp.net}
 
 set :puma_threads,    [4, 16]
 set :puma_workers,    2
