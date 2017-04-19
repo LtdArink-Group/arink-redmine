@@ -19,7 +19,9 @@ class WelcomeController < ApplicationController
   caches_action :robots
 
   def index
-    @news = News.latest User.current
+    # @news = News.latest User.current
+    redmine = Project.find_by(identifier: 'redmine')
+    redirect_to redmine
   end
 
   def robots
