@@ -1,0 +1,26 @@
+[redmine_email]:
+  email: [pivotal_tracker_email]
+  password: [pivotal_tracker_password]
+
+super_user:
+  # You can use an api token or email/password for the PT api.
+  token: [pivotal_tracker_api_token]
+
+error_notification:
+  recipient: [email_for_error_notifications]
+  from: "[information to emails FROM field]"
+
+foouser@example.net:
+  token: 1234
+
+baruser@example.net:
+  email: baruser2@fake.net
+  password: 2222
+
+super_user:
+  email: admin@net.org
+  password: 1234
+
+error_notification:
+  recipient: errors@examplet.net
+  from: "Trackmine Notifications <no-reply@example.net>"

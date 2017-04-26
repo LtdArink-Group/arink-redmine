@@ -9,6 +9,7 @@
 /config/secrets.yml
 /config/initializers/session_store.rb
 /config/initializers/secret_token.rb
+/config/trackmine.yml
 /coverage
 /db/*.db
 /db/*.sqlite3
